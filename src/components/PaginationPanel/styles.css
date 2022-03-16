@@ -1,0 +1,102 @@
+.Pagination {
+    width:100%;
+   /*  white-space: nowrap;
+    overflow:visible; */
+
+    --button-border-width: 1.5px;
+    --button-border-radius: 7px;
+}
+
+.PaginationButton {
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-width: 0;
+    border-top-width: var(--button-border-width);
+    border-left-width: var(--button-border-width);
+    border-bottom-width: var(--button-border-width);
+    border-color: black;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.PaginationButton:hover {
+    background-color: rgb(237, 237, 237);
+    cursor: pointer;
+}
+
+.PaginationButton img {
+    height: 36%
+}
+
+.PaginationButton:disabled {
+    border-color: rgb(179, 179, 179);
+    background-color: white;
+    cursor:default;
+}
+
+.PaginationButton:disabled img {
+    filter: invert(76%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(95%) contrast(91%);
+}
+
+
+.ActiveButton {
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-width: 0;
+    border-top-width: var(--button-border-width);
+    border-left-width: var(--button-border-width);
+    border-bottom-width: var(--button-border-width);
+    border-color: black;
+    color: white;
+    background-color: black;
+    font-weight: 500;
+    font-size: large;
+}
+
+
+
+.PaginationButtonDark {
+    border-color: white;
+    background-color: black;
+    color: white;
+}
+
+.PaginationButtonDark:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+.PaginationButtonDark:disabled {
+    border-color: rgb(76, 76, 76);
+    background-color: black;
+    cursor:default;
+}
+
+.PaginationButtonDark img {
+    filter: invert(100%) sepia(2%) saturate(7450%) hue-rotate(189deg) brightness(107%) contrast(100%);
+}
+
+.PaginationButtonDark:disabled img {
+    filter: invert(28%) sepia(0%) saturate(1434%) hue-rotate(159deg) brightness(96%) contrast(88%);
+}
+
+.ActiveButtonDark {
+    border-color: white;
+    color: black;
+    background-color: white;
+}
+
+
+.DoubleArrowL {
+    border-top-left-radius: var(--button-border-radius);
+    border-bottom-left-radius: var(--button-border-radius);
+}
+
+.DoubleArrowR {
+    border-right-width: var(--button-border-width);
+    border-top-right-radius: var(--button-border-radius);
+    border-bottom-right-radius: var(--button-border-radius);
+}

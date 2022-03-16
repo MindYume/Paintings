@@ -1,0 +1,67 @@
+:root {
+  background-color: white;
+  user-select:none;
+  --filter-grid-columns: 1fr 1fr 1fr 1fr;
+  --image-grid-columns: 1fr 1fr 1fr;
+  --app-width: 90%;
+  --logo-width: 10%;
+  --light-width: 3%;
+}
+
+.HeadPanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 2%;
+}
+
+.Logo {
+  width: var(--logo-width)
+}
+
+.Light {
+  width: var(--light-width)
+}
+
+.LightButton {
+  width: var(--light-width);
+  border-width: 0;
+  background-color: rgba(0, 0, 0, 0);
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0;
+  cursor: pointer;
+}
+
+.LightButton img {
+  width: 100%;
+}
+
+
+.AppPanel {
+  width: var(--app-width);
+  margin: auto;
+}
+
+.FilterPanel {
+  width:100%;
+  display: grid;
+  grid-template-columns: var(--filter-grid-columns);
+  grid-gap: 15px;
+  padding-top: 2%;
+}
+
+.ImagePanel {
+  display: grid;
+  grid-template-columns: var(--image-grid-columns);
+  grid-auto-rows: 1fr;
+  grid-gap: 15px;
+  padding-top: 2%;
+}
+
+.PaginationPanel {
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
+
+

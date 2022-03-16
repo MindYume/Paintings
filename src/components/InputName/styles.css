@@ -1,0 +1,52 @@
+.InputName {
+    width:100%;
+    height: 35px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: rgb(179, 179, 179);
+    border-radius: 7px;
+    background-color: white;
+    color: black;
+    padding-left: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.InputName::placeholder {
+    color: rgb(179, 179, 179);
+    
+}
+
+.InputName:focus {
+    /* border-width: 1.5px; */
+    border-color: black;
+}
+
+
+
+.InputNameDark {
+    width:100%;
+    height: 35px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: white;
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    padding-left: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.InputNameDark::placeholder {
+    color: rgb(84, 84, 84);
+    
+}
+
+.InputNameDark:focus {
+    /* border-width: 1.5px; */
+    border-color: white;
+}
+
