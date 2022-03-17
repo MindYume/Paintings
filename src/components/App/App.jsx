@@ -19,7 +19,7 @@ class App extends Component {
     this.state = {
       isDarkTheme: false,
       windowMode: 'desktop_1336',
-      pagesAmount: 0,
+      pagesAmount: 4,
       paintingsPerPage: 9,
       page: 1,
       images: [],
@@ -43,33 +43,23 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.onWindowSizeChange();
-    window.addEventListener('resize', this.onWindowSizeChange.bind(this));
+    axios.get('https://test-front.framework.team/authors')
+      .then((response1) => {
+        axios.get('https://test-front.framework.team/locations')
+          .then((response2) => {
+            this.setState({
+              authors: response1.data,
+              locations: response2.data,
+            });
 
-    // const { paintingsPerPage } = this.state;
-    // this.setPagesAmount(paintingsPerPage, {});
-
-    const firstLoad = setInterval(() => {
-      const { pagesAmount } = this.state;
-      if (pagesAmount > 0) {
-        axios.get('https://test-front.framework.team/authors')
-          .then((response1) => {
-            axios.get('https://test-front.framework.team/locations')
-              .then((response2) => {
-                this.setState({
-                  authors: response1.data,
-                  locations: response2.data,
-                });
-
-                this.handlePageChange(1, {}, {
-                  authors: response1.data,
-                  locations: response2.data,
-                });
-              });
+            this.handlePageChange(1, {}, {
+              authors: response1.data,
+              locations: response2.data,
+            });
+            this.onWindowSizeChange();
+            window.addEventListener('resize', this.onWindowSizeChange.bind(this));
           });
-        clearInterval(firstLoad);
-      }
-    }, 100);
+      });
   }
 
   handlePageChange(pageNumber, filter = {}, additionalInfo = {}) {

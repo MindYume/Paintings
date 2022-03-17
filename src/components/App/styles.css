@@ -3,7 +3,7 @@
   user-select:none;
   --filter-grid-columns: 1fr 1fr 1fr 1fr;
   --image-grid-columns: 1fr 1fr 1fr;
-  --app-width: 90%;
+  --app-width: 1336px;
   --logo-width: 10%;
   --light-width: 3%;
 }
